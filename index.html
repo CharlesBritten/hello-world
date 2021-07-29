@@ -1,0 +1,142 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Task</title>
+		<meta name="description" content="AJAX/PHP/CURL/JSON Task example">
+		<meta name="author" content="Chas B">
+
+		<style>
+			body {
+				font-family: arial, sans-serif;
+			}
+			table {
+				border-collapse: collapse;
+				width: 100%;
+			}
+
+			td, th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--Header-->
+		<h1>Task API's</h1>
+
+		<table>
+			<tr>
+				<th>API Name</th>
+				<th>API Description</th>
+				<th>Submit Section</th>
+			</tr>
+			<tr>
+				<td>API 1</td>
+				<td>
+					<p>Search Subject</p>
+					<textarea id="searchTerm" name="searchTerm" rows="1" cols="50">
+
+					</textarea>
+					<p>Max Rows</p>
+					<select id="selRows">
+					<option value="10">10</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					</select>
+				</td>
+				<td><button id="btnAPI1">Submit</button></td>
+			</tr>
+			<tr>
+				<td>API 2</td>
+				<td>API 2 Description</td>
+				<td>Submit Button</td>
+			</tr>
+			<tr>
+				<td>API 3</td>
+				<td>API 3 Description</td>
+				<td>Submit Button</td>
+			</tr>
+
+			<tr>
+				<td id="txtSummary"></td>
+			</tr>
+			<tr>
+				<td id="txtTitle"></td>
+			</tr>
+			<tr>
+				<td id="txtURL"></td>
+			</tr>
+
+		<!-- old
+		<div id="divResults">
+			
+			<table>
+
+				<tr>
+					<td align="right">
+						Continent: 
+					</td>
+					<td id="txtContinent">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Capital: 
+					</td>
+					<td id="txtCapital">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Languages: 
+					</td>
+					<td id="txtLanguages">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Population: 
+					</td>
+					<td id="txtPopulation">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Area (km<sup>2</sup>): 
+					</td>
+					<td id="txtArea">
+						
+					</td>
+
+				</tr>
+
+
+			</table>
+
+		</div>
+	-->
+
+		<script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+		<script type="application/javascript" src="libs/js/script.js"></script>
+
+	</body>
+
+</html>
