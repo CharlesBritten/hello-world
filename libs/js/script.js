@@ -1,6 +1,7 @@
 	
 //API 1	
 	$('#btnAPI1').click(function() {
+		console.log("Wikipedia Function Run");
 
 		$.ajax({
 			url: "libs/php/getWikipedia.php",
@@ -29,6 +30,8 @@
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 				// your error code
+				console.log("Errors thrown");
+				console.log(jqXHR, textStatus, errorThrown);
 			}
 		}); 
 	
