@@ -7,13 +7,11 @@
 
 	$executionStartTime = microtime(true);
 
-	//$url='http://api.geonames.org/wikipediaSearchJSON?formatted=true&q=' . $_REQUEST['q'] . '&maxRows=' . $_REQUEST['maxRows'] . '&username=ChasB&style=full';
-
-	$url='http://api.geonames.org/wikipediaSearchJSON?formatted=true&q=London&maxRows=' . $_REQUEST['maxRows'] . '&username=ChasB&style=full';
+	//working hardcode
+	$url='http://api.geonames.org/weatherIcaoJSON?formatted=true&ICAO=EGLL&username=ChasB&style=full';
 	
-	//$url='http://api.geonames.org/wikipediaSearchJSON?formatted=true&q=London&maxRows=10&username=ChasB&style=full';
-
-	//$url='http://api.geonames.org/wikipediaSearchJSON?formatted=true&q=' . $_REQUEST['q'] . '&maxRows=' . $_REQUEST['maxRows'] . '&username=ChasB&style=full';
+	//not working
+	//$url='http://api.geonames.org/weatherIcaoJSON?formatted=true&ICAO=' . $_REQUEST['ICAO'] . '&username=ChasB=full';
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -30,7 +28,7 @@
 	$output['status']['name'] = "ok";
 	$output['status']['description'] = "success";
 	$output['status']['returnedIn'] = intval((microtime(true) - $executionStartTime) * 1000) . " ms";
-	$output['data'] = $decode['geonames'];
+	$output['data'] = $decode['weatherObservation'];
 	
 	header('Content-Type: application/json; charset=UTF-8');
 

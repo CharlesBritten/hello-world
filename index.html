@@ -4,29 +4,17 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Task</title>
+		<title>Task 1</title>
 		<meta name="description" content="AJAX/PHP/CURL/JSON Task example">
 		<meta name="author" content="Chas B">
+		
+		<link href="libs/css/style.css" rel="stylesheet" type="text/css">
 
-		<style>
-			body {
-				font-family: arial, sans-serif;
-			}
-			table {
-				border-collapse: collapse;
-				width: 100%;
-			}
-
-			td, th {
-				border: 1px solid #dddddd;
-				text-align: left;
-				padding: 8px;
-			}
-		</style>
 	</head>
 
 	<body>
-
+	
+		
 		<!--Header-->
 		<h1>Task API's</h1>
 
@@ -37,7 +25,7 @@
 				<th>Submit Section</th>
 			</tr>
 			<tr>
-				<td>API 1</td>
+				<td>API 1 - Wikipedia</td>
 				<td>
 					<p>Search Subject</p>
 					<textarea id="searchTerm" name="searchTerm" rows="1" cols="50">
@@ -45,100 +33,166 @@
 					</textarea>
 					<p>Max Rows</p>
 					<select id="selRows">
+					<option value="1">1</option>
+					<option value="3">3</option>
 					<option value="10">10</option>
 					<option value="50">50</option>
 					<option value="100">100</option>
 					</select>
 				</td>
-				<td><button id="btnAPI1">Submit</button></td>
+				<td>
+					<button id="btnAPI1">Submit</button>
+				</td>
 			</tr>
+			<!-- API 2 -->
 			<tr>
-				<td>API 2</td>
-				<td>API 2 Description</td>
-				<td>Submit Button</td>
-			</tr>
-			<tr>
-				<td>API 3</td>
-				<td>API 3 Description</td>
-				<td>Submit Button</td>
-			</tr>
-
-			<tr>
-				<td id="txtSummary">
-
+				<td>API 2 - Airport Weather</td>
+				<td>
+					<select id="selAirport">
+						<option value="EGLL">Heathrow</option>
+						<option value="EGGW">Luton</option>
+						<option value="EGSS">Stanstead</option>
+						<option value="EGCC">Manchester</option>
+					</select>
+				</td>
+				<td>
+					<button id="btnAPI2">Submit</button>
 				</td>
 			</tr>
 			<tr>
-				<td id="txtTitle">
-
+				<td>API 3 - Test</td>
+				<td>
+					<select id="selCountry">
+						<option value="GB">Great Britain</option>
+						<option value="FR">France</option>
+						<option value="DE">Germany</option>
+						<option value="US">USA</option>
+					</select>
+			
+					<select id="selLanguage">
+						<option value="en">English</option>
+						<option value="fr">Francais</option>
+						<option value="de">Deutsche</option>
+					</select>
+			
+					<!-- <button id="btnRun">Run</button> -->
+				</td>
+				<td>
+					<button id="btnRun">Submit</button>
 				</td>
 			</tr>
+		</table>
+
+	<!-- API 1 Outputs -->
+		<table>
 			<tr>
-				<td id="txtURL">
+				<td id="txtSummary"></td>
+			</tr>
+			<tr>
+				<td id="txtTitle"></td>
+			</tr>
+			<tr>
+				<td id="txtURL"></td>
+			</tr>
+		</table>
+	
+	<!-- API 2 Outputs -->
+	<table>
+		<tr>
+			<td align="right">
+				Observation: 
+			</td>
+			<td id="txtObs">
+				
+			</td>
+		</tr>
+		<tr>
+			<td align="right">
+				ICAO: 
+			</td>
+			<td id="txtICAO"></td>
+		</tr>
+		<tr>
+			<td align="right">
+				Clouds: 
+			</td>
+			<td id="txtClouds"></td>
+		</tr>
+		<tr>
+			<td align="right">
+				Station: 
+			</td>
+			<td id="txtStation"></td>
+		</tr>
+		<tr>
+			<td align="right">
+				Wind: 
+			</td>
+			<td id="txtWind"></td>
+		</tr>
+	</table>
+
+
+	<!-- API 3 Outputs -->
+	
+	<div id="divResults">
+			
+		<table>
+
+			<tr>
+				<td align="right">
+					Continent: 
+				</td>
+				<td id="txtContinent">
 					
 				</td>
+
 			</tr>
 
-		<!-- old
-		<div id="divResults">
-			
-			<table>
+			<tr>
+				<td align="right">
+					Capital: 
+				</td>
+				<td id="txtCapital">
+					
+				</td>
 
-				<tr>
-					<td align="right">
-						Continent: 
-					</td>
-					<td id="txtContinent">
-						
-					</td>
+			</tr>
 
-				</tr>
+			<tr>
+				<td align="right">
+					Languages: 
+				</td>
+				<td id="txtLanguages">
+					
+				</td>
 
-				<tr>
-					<td align="right">
-						Capital: 
-					</td>
-					<td id="txtCapital">
-						
-					</td>
+			</tr>
 
-				</tr>
+			<tr>
+				<td align="right">
+					Population: 
+				</td>
+				<td id="txtPopulation">
+					
+				</td>
 
-				<tr>
-					<td align="right">
-						Languages: 
-					</td>
-					<td id="txtLanguages">
-						
-					</td>
+			</tr>
 
-				</tr>
+			<tr>
+				<td align="right">
+					Area (km<sup>2</sup>): 
+				</td>
+				<td id="txtArea">
+					
+				</td>
 
-				<tr>
-					<td align="right">
-						Population: 
-					</td>
-					<td id="txtPopulation">
-						
-					</td>
-
-				</tr>
-
-				<tr>
-					<td align="right">
-						Area (km<sup>2</sup>): 
-					</td>
-					<td id="txtArea">
-						
-					</td>
-
-				</tr>
+			</tr>
 
 
-			</table>
+		</table>
 
-		</div>
-	-->
+	</div>
 
 		<script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
 		<script type="application/javascript" src="libs/js/script.js"></script>
