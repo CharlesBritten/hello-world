@@ -82,7 +82,42 @@ $('#btnAPI2').click(function() {
 
 });
 
-//API3 Test
+//API 3 Nearest Country Code
+$('#btnAPI3').click(function() {
+	console.log("Country Function");
+
+	$.ajax({
+		url: "libs/php/getcountryCode.php",
+		type: 'POST',
+		dataType: 'json',
+		data: {
+			country: $('#selCountry').val(),
+			lang: $('#selLanguage').val()
+		},
+		success: function(result) {
+
+			console.log(JSON.stringify(result));
+
+			if (result.status.name == "ok") {
+
+				$('#txtLanguage').html(result['data'][0]['languages']);
+				$('#txtDistance').html(result['data']['distance']);
+				$('#txtCode').html(result['data']['countryCode']);
+				$('#txtName').html(result['data']['countryName']);
+				//$('#txtArea').html(result['data'][0]['areaInSqKm']);
+
+			}
+		
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+			// your error code
+		}
+	}); 
+
+});
+
+
+//API4 Test
 $('#btnRun').click(function() {
 	console.log("Country Function");
 
