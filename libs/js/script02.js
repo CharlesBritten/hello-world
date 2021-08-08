@@ -1,7 +1,7 @@
 //API 1	- Wikipedia
 	$('#btnAPI1').click(function() {
 		//Debugging readouts
-		console.log("Wikipedia Function Running");
+		console.log("Wikipedia Function Run");
 		console.log($('#searchTerm').val());
 		console.log("Number of rows:");
 		console.log($('#selRows').val());
@@ -10,12 +10,11 @@
 			url: "libs/php/getWikipedia.php",
 			type: 'POST',
 			dataType: 'json',
-			data: {
-				//q: $('#searchTerm').val(),
-				maxRows: $('#selRows').val(),
-				q: $('#searchTerm').val()
+            data: {
+				q: $('#searchTerm').val(),
+				maxRows: $('#selRows').val()
 			},
-			
+
 			success: function(result) {
 				console.log("Success");
 
@@ -31,9 +30,8 @@
 			
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
-				// your error code
-				//console.log("Errors thrown");
-				//console.log(jqXHR, textStatus, errorThrown);
+				console.log("Errors thrown");
+				console.log(jqXHR, textStatus, errorThrown);
 			}
 		}); 
 	
@@ -70,7 +68,6 @@ $('#btnAPI2').click(function() {
 		
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
-			// your error code
 			console.log("Errors thrown");
 			console.log(jqXHR, textStatus, errorThrown);
 		}
@@ -81,14 +78,16 @@ $('#btnAPI2').click(function() {
 //API 3 Nearest Country Code
 $('#btnAPI3').click(function() {
 	console.log("Country Function");
+    console.log($('#inputLat').val());
+    console.log($('#inputLong').val());
 
 	$.ajax({
 		url: "libs/php/getcountryCode.php",
 		type: 'POST',
 		dataType: 'json',
 		data: {
-			country: $('#selCountry').val(),
-			lang: $('#selLanguage').val()
+			lat: $('#inputLat').val(),
+			lng: $('#inputLong').val()
 		},
 		success: function(result) {
 
@@ -105,7 +104,8 @@ $('#btnAPI3').click(function() {
 		
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
-			// your error code
+            console.log("Errors thrown");
+			console.log(jqXHR, textStatus, errorThrown);
 		}
 	}); 
 

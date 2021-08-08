@@ -1,15 +1,15 @@
 <?php
 
-	// remove for production
-
 	ini_set('display_errors', 'On');
 	error_reporting(E_ALL);
 
 	$executionStartTime = microtime(true);
 
-	$url='http://api.geonames.org/countryCodeJSON?formatted=true&lat=28.03&lng=26.19&username=ChasB&style=full';
-	
-	//$url='http://api.geonames.org/countryInfoJSON?formatted=true&lang=' . $_REQUEST['lang'] . '&country=' . $_REQUEST['country'] . '&username=ChasB&style=full';
+	//Variable version
+	$url='http://api.geonames.org/countryCodeJSON?formatted=true&lat=' . $_REQUEST['lat'] . '&lng=' . $_REQUEST['lng'] . '&username=ChasB&style=full';
+
+	//Hard coded test version
+	//$url='http://api.geonames.org/countryCodeJSON?formatted=true&lat=28.03&lng=26.19&username=ChasB&style=full';
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

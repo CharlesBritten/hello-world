@@ -1,17 +1,15 @@
 <?php
 
-	// remove for production
-
 	ini_set('display_errors', 'On');
 	error_reporting(E_ALL);
 
 	$executionStartTime = microtime(true);
 
-	//working hardcode
-	$url='http://api.geonames.org/weatherIcaoJSON?formatted=true&ICAO=EGLL&username=ChasB&style=full';
+	//hardcode test version
+	//$url='http://api.geonames.org/weatherIcaoJSON?formatted=true&ICAO=EGLL&username=ChasB&style=full';
 	
-	//not working at the moment
-	//$url='http://api.geonames.org/weatherIcaoJSON?formatted=true&ICAO=' . $_REQUEST['ICAO'] . '&username=ChasB=full';
+	//variable version
+	$url='http://api.geonames.org/weatherIcaoJSON?formatted=true&ICAO=' . $_REQUEST['ICAO'] . '&username=ChasB=full';
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

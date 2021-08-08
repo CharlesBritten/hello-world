@@ -1,19 +1,17 @@
 <?php
 
-	// remove for production
-
 	ini_set('display_errors', 'On');
 	error_reporting(E_ALL);
 
 	$executionStartTime = microtime(true);
-
-	//$url='http://api.geonames.org/wikipediaSearchJSON?formatted=true&q=' . $_REQUEST['q'] . '&maxRows=' . $_REQUEST['maxRows'] . '&username=ChasB&style=full';
-
-	//$url='http://api.geonames.org/wikipediaSearchJSON?formatted=true&q=London&maxRows=' . $_REQUEST['maxRows'] . '&username=ChasB&style=full';
 	
+	//hard code test version
 	//$url='http://api.geonames.org/wikipediaSearchJSON?formatted=true&q=London&maxRows=10&username=ChasB&style=full';
 
+	//variable version
 	$url='http://api.geonames.org/wikipediaSearchJSON?formatted=true&q=' . $_REQUEST['q'] . '&maxRows=' . $_REQUEST['maxRows'] . '&username=ChasB&style=full';
+
+	
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

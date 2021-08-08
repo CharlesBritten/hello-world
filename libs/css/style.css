@@ -13,6 +13,10 @@ td, th {
     padding: 8px;
 }
 
-p {
+#apiInputs, #API-1, #API-2 {
+    margin-bottom: 3rem;
+}
+
+.results {
     font-weight: bold;
 }
