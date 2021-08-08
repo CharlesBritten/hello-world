@@ -39,7 +39,7 @@
 
 //API2 - ICAO Weather
 $('#btnAPI2').click(function() {
-	console.log("ICAO Function");
+	console.log("ICAO Functionnn");
 	console.log($('#selAirport').val());
 
 	$.ajax({
@@ -47,7 +47,8 @@ $('#btnAPI2').click(function() {
 		type: 'POST',
 		dataType: 'json',
 		data: {
-			ICAO: $('#selAirport').val()
+			//ICAO: $('#selAirport').val()
+			ICAO: 'EGLL'
 		},
 		success: function(result) {
 

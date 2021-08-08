@@ -16,29 +16,21 @@
 	
 		<!--                     Data Inputs                        -->
 
-		<h1>Task 1</h1>
+		<h1>Task</h1>
 		<div id="apiInputs">
 		<!-- API 1 Inputs -->
 		<table>
 			<tr>
-				<th>Name</th>
-				<th>API Inputs</th>
-				<th>Submit Section</th>
+				<th>API Name</th>
+				<th>API Description</th>
+				<th>Submit Query</th>
 			</tr>
 			<tr>
 				<td>API 1 - Wikipedia</td>
 				<td>
-					<label for="fname">Search Subject:</label><br>
+					<label for="searchTerm">Search Subject:</label><br>
 					<input type="text" id="searchTerm" name="searchTerm"><br><br>
-					<!--
-					<textarea id="searchTerm" name="searchTerm" rows="1" cols="50">
-					</textarea> -->
-					<!--
-					<select id="searchTerm">
-						<option value="London">London</option>
-					</select>
-				-->
-				<label for="selRows">Number of results:</label>
+					<label for="selRows">Number of results:</label>
 					<br>
 					<select id="selRows">
 					<option value="1">1</option>
@@ -76,9 +68,9 @@
 			<tr>
 			<td>API 3 - Country Location</td>
 			<td>
-				<label for="fname">Latitude:</label><br>
+				<label for="inputLat">Latitude:</label><br>
 				<input type="number" id="inputLat" name="inputLat"><br><br> 
-				<label for="lname">Longitude:</label><br>
+				<label for="inputLong">Longitude:</label><br>
 				<input type="number" id="inputLong" name="inputLong"><br><br>
 			</td>
 			<td>
@@ -117,7 +109,7 @@
 	<!-- API 1 Data Outputs -->
 	<div id="API-1">
 	<hr>
-	<p class="results">API 1 Outputs</p>
+	<p class="results">API 1 Results</p>
 		<table>
 			<tr>
 				<td>Title:</td>
@@ -137,7 +129,7 @@
 	<!-- API 2 Data Outputs -->
 	<div id="API-2">
 	<hr>
-	<p class="results">API 2 Outputs</p>
+	<p class="results">API 2 Results</p>
 		<table>
 			<tr>
 				<td>Observation:</td>
@@ -165,24 +157,24 @@
 	<!-- API 3 Data Outputs -->
 	<div id="API-3">
 		<hr>
-		<p class="results">API 3 Outputs</p>
+		<p class="results">API 3 Results</p>
 		<table>
 			<tr>
-				<td>Language:</td>
-				<td id="txtLanguage"></td>
-			</tr>
-			<tr>
-				<td>Distance:</td>
-				<td id="txtDistance"></td>
+				<td>Country Name:</td>
+				<td id="txtName"></td>
 			</tr>
 			<tr>
 				<td>Country Code:</td>
 				<td id="txtCode"></td>
 			</tr>
 			<tr>
-				<td>Country Name:</td>
-				<td id="txtName"></td>
+				<td>Languages:</td>
+				<td id="txtLanguage"></td>
 			</tr>
+			<tr>
+				<td>Distance:</td>
+				<td id="txtDistance"></td>
+			</tr>		
 		</table>
 	</div>
 
