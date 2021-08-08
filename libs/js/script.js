@@ -2,6 +2,7 @@
 	$('#btnAPI1').click(function() {
 		//Debugging readouts
 		console.log("Wikipedia Function Run");
+		console.log("City: ");
 		console.log($('#searchTerm').val());
 		console.log("Number of rows:");
 		console.log($('#selRows').val());
@@ -26,10 +27,6 @@
 					$('#txtSummary').html(result['data'][0]['summary']);
 					$('#txtTitle').html(result['data'][0]['title']);
 					$('#txtURL').html(result['data'][0]['wikipediaUrl']);
-					/*
-					$('#txtPopulation').html(result['data'][0]['population']);
-					$('#txtArea').html(result['data'][0]['areaInSqKm']);
-					*/
 
 				}
 			
@@ -100,11 +97,10 @@ $('#btnAPI3').click(function() {
 
 			if (result.status.name == "ok") {
 
-				$('#txtLanguage').html(result['data'][0]['languages']);
+				$('#txtLanguage').html(result['data']['languages']);
 				$('#txtDistance').html(result['data']['distance']);
 				$('#txtCode').html(result['data']['countryCode']);
 				$('#txtName').html(result['data']['countryName']);
-				//$('#txtArea').html(result['data'][0]['areaInSqKm']);
 
 			}
 		

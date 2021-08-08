@@ -10,7 +10,7 @@
 	//working hardcode
 	$url='http://api.geonames.org/weatherIcaoJSON?formatted=true&ICAO=EGLL&username=ChasB&style=full';
 	
-	//not working
+	//not working at the moment
 	//$url='http://api.geonames.org/weatherIcaoJSON?formatted=true&ICAO=' . $_REQUEST['ICAO'] . '&username=ChasB=full';
 
 	$ch = curl_init();

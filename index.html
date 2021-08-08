@@ -14,10 +14,11 @@
 
 	<body>
 	
-		
-		<!--Header-->
+		<!--                     Data Inputs                        -->
+
 		<h1>Task API's</h1>
 
+		<!-- API 1 Inputs -->
 		<table>
 			<tr>
 				<th>API Name</th>
@@ -44,7 +45,8 @@
 					<button id="btnAPI1">Submit</button>
 				</td>
 			</tr>
-			<!-- API 2 -->
+
+			<!-- API 2 Inputs -->
 			<tr>
 				<td>API 2 - Airport Weather</td>
 				<td>
@@ -60,7 +62,7 @@
 				</td>
 			</tr>
 			
-			<!-- API 3 -->
+			<!-- API 3 Inputs -->
 			<tr>
 			<td>API 3 - Country Location</td>
 			<td></td>
@@ -68,8 +70,7 @@
 				<button id="btnAPI3">Submit</button>
 			</td>
 
-
-			<!-- API 4 -->
+			<!-- API 4 Test Ref, delete once completed-->
 			<tr>
 				<td>API 4 - Test</td>
 				<td>
@@ -85,169 +86,129 @@
 						<option value="fr">Francais</option>
 						<option value="de">Deutsche</option>
 					</select>
-			
-					<!-- <button id="btnRun">Run</button> -->
 				</td>
 				<td>
 					<button id="btnRun">Submit</button>
 				</td>
 			</tr>
 		</table>
+		<hr>
+	
+	<!--               Data Outputs                    -->
 
-	<!-- API 1 Outputs -->
+	<!-- API 1 Data Outputs -->
+	<div id="API-1">
+	<p class="results">API 1 Outputs</p>
 		<table>
 			<tr>
-				<td id="txtSummary"></td>
-			</tr>
-			<tr>
+				<td>Title:</td>
 				<td id="txtTitle"></td>
 			</tr>
 			<tr>
+				<td>Summary:</td>
+				<td id="txtSummary"></td>
+			</tr>
+			<tr>
+				<td>URL:</td>
 				<td id="txtURL"></td>
 			</tr>
 		</table>
+		<hr>
+	</div>
 	
-	<!-- API 2 Outputs -->
-	<table>
-		<tr>
-			<td align="right">
-				Observation: 
-			</td>
-			<td id="txtObs">
-				
-			</td>
-		</tr>
-		<tr>
-			<td align="right">
-				ICAO: 
-			</td>
-			<td id="txtICAO"></td>
-		</tr>
-		<tr>
-			<td align="right">
-				Clouds: 
-			</td>
-			<td id="txtClouds"></td>
-		</tr>
-		<tr>
-			<td align="right">
-				Station: 
-			</td>
-			<td id="txtStation"></td>
-		</tr>
-		<tr>
-			<td align="right">
-				Wind: 
-			</td>
-			<td id="txtWind"></td>
-		</tr>
-	</table>
-
-	<!-- API 3 Outputs -->
-	<table>
-
-		<tr>
-			<td align="right">
-				Language: 
-			</td>
-			<td id="txtLanguage">
-				
-			</td>
-
-		</tr>
-
-		<tr>
-			<td align="right">
-				Distance: 
-			</td>
-			<td id="txtDistance">
-				
-			</td>
-
-		</tr>
-
-		<tr>
-			<td align="right">
-				Country Code: 
-			</td>
-			<td id="txtCode">
-				
-			</td>
-
-		</tr>
-
-		<tr>
-			<td align="right">
-				Country Name: 
-			</td>
-			<td id="txtName">
-				
-			</td>
-
-		</tr>
-
-	</table>
-
-
-	<!-- API 4 Outputs -->
-	
-	<div id="divResults">
-			
+	<!-- API 2 Data Outputs -->
+	<div id="API-2">
+	<p class="results">API 2 Outputs</p>
 		<table>
+			<tr>
+				<td>Observation:</td>
+				<td id="txtObs"></td>
+			</tr>
+			<tr>
+				<td>ICAO:</td>
+				<td id="txtICAO"></td>
+			</tr>
+			<tr>
+				<td>Clouds:</td>
+				<td id="txtClouds"></td>
+			</tr>
+			<tr>
+				<td>Station Name:</td>
+				<td id="txtStation"></td>
+			</tr>
+			<tr>
+				<td>Wind Speed:</td>
+				<td id="txtWind"></td>
+			</tr>
+		</table>
+		<hr>
+	</div>
 
+	<!-- API 3 Data Outputs -->
+	<div id="API-3">
+		<p class="results">API 3 Outputs</p>
+		<table>
+			<tr>
+				<td>Language:</td>
+				<td id="txtLanguage"></td>
+			</tr>
+			<tr>
+				<td>Distance:</td>
+				<td id="txtDistance"></td>
+			</tr>
+			<tr>
+				<td>Country Code:</td>
+				<td id="txtCode"></td>
+			</tr>
+			<tr>
+				<td>Country Name:</td>
+				<td id="txtName"></td>
+			</tr>
+		</table>
+		<hr>
+	</div>
+
+
+	<!-- API 4 Data Outputs, delete once complete -->
+	<div id="divResults">
+		<p class="results">API 4 Outputs</p>
+		<table>
 			<tr>
 				<td align="right">
 					Continent: 
 				</td>
 				<td id="txtContinent">
-					
 				</td>
-
 			</tr>
-
 			<tr>
 				<td align="right">
 					Capital: 
 				</td>
 				<td id="txtCapital">
-					
 				</td>
-
 			</tr>
-
 			<tr>
 				<td align="right">
 					Languages: 
 				</td>
 				<td id="txtLanguages">
-					
 				</td>
-
 			</tr>
-
 			<tr>
 				<td align="right">
 					Population: 
 				</td>
-				<td id="txtPopulation">
-					
+				<td id="txtPopulation">	
 				</td>
-
 			</tr>
-
 			<tr>
 				<td align="right">
 					Area (km<sup>2</sup>): 
 				</td>
-				<td id="txtArea">
-					
+				<td id="txtArea">	
 				</td>
-
 			</tr>
-
-
 		</table>
-
 	</div>
 
 		<script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
