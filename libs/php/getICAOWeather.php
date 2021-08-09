@@ -5,11 +5,12 @@
 
 	$executionStartTime = microtime(true);
 
+	//variable version
+	$url='http://api.geonames.org/weatherIcaoJSON?formatted=true&ICAO=' . $_REQUEST['ICAO'] . '&username=ChasB&style=full';
+
 	//hardcode test version
 	//$url='http://api.geonames.org/weatherIcaoJSON?formatted=true&ICAO=EGGW&username=ChasB&style=full';
 	
-	//variable version
-	$url='http://api.geonames.org/weatherIcaoJSON?formatted=true&ICAO=' . $_REQUEST['ICAO'] . '&username=ChasB&style=full';
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

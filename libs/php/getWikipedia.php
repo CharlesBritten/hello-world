@@ -4,16 +4,15 @@
 	error_reporting(E_ALL);
 
 	$executionStartTime = microtime(true);
+
+	//variable version with default number of results
+	$url='http://api.geonames.org/wikipediaSearchJSON?formatted=true&q=' . $_REQUEST['q'] . '&maxRows=1&username=ChasB&style=full';
 	
 	//hard code test version
 	//$url='http://api.geonames.org/wikipediaSearchJSON?formatted=true&q=London&maxRows=10&username=ChasB&style=full';
 
 	//variable version with results variable
 	//$url='http://api.geonames.org/wikipediaSearchJSON?formatted=true&q=' . $_REQUEST['q'] . '&maxRows=' . $_REQUEST['maxRows'] . '&username=ChasB&style=full';
-
-	//variable version with default number of results
-	$url='http://api.geonames.org/wikipediaSearchJSON?formatted=true&q=' . $_REQUEST['q'] . '&maxRows=1&username=ChasB&style=full';
-
 	
 
 	$ch = curl_init();
