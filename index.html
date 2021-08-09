@@ -29,7 +29,9 @@
 				<td>API 1 - Wikipedia</td>
 				<td>
 					<label for="searchTerm">Search Subject:</label><br>
-					<input type="text" id="searchTerm" name="searchTerm"><br><br>
+					<input type="text" id="searchTerm" name="searchTerm"><br>
+
+					<!-- Option to vary results to be developed
 					<label for="selRows">Number of results:</label>
 					<br>
 					<select id="selRows">
@@ -39,6 +41,7 @@
 					<option value="50">50</option>
 					<option value="100">100</option>
 					</select>
+					-->
 			
 				</td>
 				<td>
@@ -68,10 +71,10 @@
 			<tr>
 			<td>API 3 - Country Location</td>
 			<td>
-				<label for="inputLat">Latitude:</label><br>
+				<label for="inputLat">Enter Latitude:</label><br>
 				<input type="number" id="inputLat" name="inputLat"><br><br> 
-				<label for="inputLong">Longitude:</label><br>
-				<input type="number" id="inputLong" name="inputLong"><br><br>
+				<label for="inputLong">Enter Longitude:</label><br>
+				<input type="number" id="inputLong" name="inputLong"><br>
 			</td>
 			<td>
 				<button id="btnAPI3">Submit</button>
@@ -132,11 +135,15 @@
 	<p class="results">API 2 Results</p>
 		<table>
 			<tr>
+				<td>Station Name:</td>
+				<td id="txtStation"></td>
+			</tr>
+			<tr>
 				<td>Observation:</td>
 				<td id="txtObs"></td>
 			</tr>
 			<tr>
-				<td>ICAO:</td>
+				<td>ICAO Code:</td>
 				<td id="txtICAO"></td>
 			</tr>
 			<tr>
@@ -144,11 +151,7 @@
 				<td id="txtClouds"></td>
 			</tr>
 			<tr>
-				<td>Station Name:</td>
-				<td id="txtStation"></td>
-			</tr>
-			<tr>
-				<td>Wind Speed:</td>
+				<td>Wind Speed (kts):</td>
 				<td id="txtWind"></td>
 			</tr>
 		</table>
@@ -171,15 +174,17 @@
 				<td>Languages:</td>
 				<td id="txtLanguage"></td>
 			</tr>
+			<!-- Removing distance as it's always 0
 			<tr>
 				<td>Distance:</td>
 				<td id="txtDistance"></td>
-			</tr>		
+			</tr>
+			-->		
 		</table>
 	</div>
 
 	
-	<!-- API 4 Data Outputs, delete once complete -->
+	<!-- API 4 Ref Data Outputs, delete once complete -->
 	<!--
 	<div id="divResults">
 		<p class="results">API 4 Outputs</p>
@@ -223,7 +228,7 @@
 	</div>
 -->
 
-		<script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+		<script type="application/javascript" src="libs/js/jquery-3.6.0.min.js"></script>
 		<script type="application/javascript" src="libs/js/script.js"></script>
 
 	</body>

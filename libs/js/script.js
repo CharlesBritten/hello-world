@@ -12,7 +12,9 @@
 			dataType: 'json',
             data: {
 				q: $('#searchTerm').val(),
-				maxRows: $('#selRows').val()
+				
+				//max rows currenlty defaulted to 1
+				//maxRows: $('#selRows').val()
 			},
 
 			success: function(result) {
@@ -39,16 +41,17 @@
 
 //API2 - ICAO Weather
 $('#btnAPI2').click(function() {
-	console.log("ICAO Functionnn");
+	console.log("ICAO Function");
 	console.log($('#selAirport').val());
 
 	$.ajax({
 		url: "libs/php/getICAOWeather.php",
 		type: 'POST',
 		dataType: 'json',
+		//processData: false,
 		data: {
-			//ICAO: $('#selAirport').val()
-			ICAO: 'EGLL'
+			ICAO: $('#selAirport').val()
+			//ICAO: 'EGLL'
 		},
 		success: function(result) {
 
