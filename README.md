@@ -3,7 +3,7 @@ Welcome to my github.
 
 I'm Charles Britten, a full stack developer who has recenlty comnpleted a year long coding traineeship with IT Career Switch.
 
-Languages I've learned include:
+Languages I've learned include: <br>
 
 • Javascript <br>
 • HTML/CSS <br>
@@ -14,7 +14,7 @@ Languages I've learned include:
 • Python <br>
 • Node JS <br>
 
-Frameworks include:
+Frameworks include: <br>
 • Bootstrap <br>
 • Jquery <br>
 • React <br>
