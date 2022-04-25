@@ -5,18 +5,18 @@ I'm Charles Britten, a full stack developer who has recenlty comnpleted a year l
 
 Languages I've learned include:
 
-• Javascript
-• HTML/CSS
-• PHP
-• SQL
-• C#
-• Java
-• Python
-• Node
+• Javascript <br>
+• HTML/CSS <br>
+• PHP <br>
+• SQL (mariaDB) <br>
+• C# <br>
+• Java <br>
+• Python <br>
+• Node JS <br>
 
 Frameworks include:
-• Bootstrap
-• Jquery
-• React
+• Bootstrap <br>
+• Jquery <br>
+• React <br>
 
-Please contact me to get access to any of my private repositories.
+Please contact me to gain access to any of my private repositories.
