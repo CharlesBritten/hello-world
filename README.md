@@ -1,5 +1,5 @@
 # hello-world
-Welcome to my github
+Welcome to my github.
 
 I'm Charles Britten, a full stack developer who has recenlty comnpleted a year long coding traineeship with IT Career Switch.
 
